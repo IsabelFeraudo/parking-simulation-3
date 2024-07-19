@@ -8,7 +8,7 @@ const port = 5000;
 app.use(cors());
 app.use(express.json());
 
-// Simulación de datos basada en parámetros
+/*// Simulación de datos basada en parámetros
 const simulateData = (cantidadDeFilas, filaDesde, filaHasta) => {
   // Aquí deberías agregar la lógica para simular los datos según los parámetros
   const eventos = []; // Genera eventos basados en la cantidadDeFilas y otros parámetros
@@ -36,7 +36,7 @@ const simulateData = (cantidadDeFilas, filaDesde, filaHasta) => {
 
   return { eventos };
 };
-
+*/
 app.get('/api/data', (req, res) => {
   const { cantidadDeFilas, filaDesde, filaHasta } = req.query;
   const data = simulateData(Number(cantidadDeFilas), Number(filaDesde), Number(filaHasta));
